@@ -1,0 +1,18 @@
+# Copy this file to terraform.tfvars and fill in your actual values
+# DO NOT commit terraform.tfvars to version control
+
+# AWS Configuration
+aws_region = "us-east-1"
+
+# Snowflake Integration Configuration
+# Leave these empty for initial deployment (Stage 1)
+# Fill in after setting up Snowflake storage integration (Stage 2)
+
+# Get these values from Snowflake after creating the storage integration:
+# 1. Run: DESC STORAGE INTEGRATION s3_integration;
+# 2. Extract account ID from STORAGE_AWS_IAM_USER_ARN (12-digit number)
+# 3. Copy STORAGE_AWS_EXTERNAL_ID value exactly
+
+snowflake_account_id = ""  # Replace with your Snowflake AWS account ID (12 digits)
+snowflake_external_id = ""  # Replace with your external ID from Snowflake
+enable_snowflake_integration = false  # Set to true after you have the Snowflake values
