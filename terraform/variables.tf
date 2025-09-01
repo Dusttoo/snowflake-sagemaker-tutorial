@@ -9,7 +9,7 @@ variable "snowflake_account_id" {
   type        = string
   sensitive   = true
   default     = ""
-  
+
   validation {
     condition     = length(var.snowflake_account_id) == 0 || can(regex("^[0-9]{12}$", var.snowflake_account_id))
     error_message = "Snowflake account ID must be a 12-digit AWS account number or empty for initial deployment."
@@ -21,7 +21,7 @@ variable "snowflake_external_id" {
   type        = string
   sensitive   = true
   default     = ""
-  
+
   validation {
     condition     = length(var.snowflake_external_id) == 0 || length(var.snowflake_external_id) > 10
     error_message = "Snowflake external ID must be provided from Snowflake integration or empty for initial deployment."

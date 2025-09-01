@@ -1,2 +1,81 @@
+# Claude AI files
 .claude
-ml-venv
+
+# Python virtual environments
+ml-venv/
+venv/
+env/
+ENV/
+.env
+.venv
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform/
+.terraform.lock.hcl
+terraform.tfplan
+terraform.tfplan.json
+
+# AWS credentials and config
+.aws/
+aws-credentials.json
+credentials.json
+
+# Configuration files with sensitive data
+config.json
+local_config.json
+*.config.json
+
+# Data files (often large and potentially sensitive)
+data/*.csv
+data/*.json
+data/*.parquet
+*.csv
+*.json
+
+# Model artifacts (can be large)
+models/*.pkl
+models/*.joblib
+models/*.h5
+*.pkl
+*.joblib
+*.model
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
