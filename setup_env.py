@@ -11,6 +11,21 @@ import sys
 from pathlib import Path
 
 
+def _get_venv_paths():
+    """Return (python_path, pip_path, activate_script, venv_bin_path) for the local venv."""
+    if os.name == "nt":
+        python_path = os.path.abspath("venv\\Scripts\\python.exe")
+        pip_path = os.path.abspath("venv\\Scripts\\pip.exe")
+        activate_script = "venv\\Scripts\\activate.bat"
+        venv_bin_path = os.path.abspath("venv\\Scripts")
+    else:
+        python_path = os.path.abspath("venv/bin/python")
+        pip_path = os.path.abspath("venv/bin/pip")
+        activate_script = "venv/bin/activate"
+        venv_bin_path = os.path.abspath("venv/bin")
+    return python_path, pip_path, activate_script, venv_bin_path
+
+
 def print_step(step_num, title):
     """Print a formatted step header"""
     print(f"\n{'='*60}")
@@ -65,7 +80,9 @@ def check_prerequisites():
         print("\nPlease install missing tools and run this script again.")
         print("Installation guides:")
         print("- Terraform: https://terraform.io/downloads")
-        print("- AWS CLI: pip install awscli")
+        print(
+            "- AWS CLI (v2): https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html"
+        )
         return False
 
     print("\nAll prerequisites found!")
@@ -84,16 +101,18 @@ def setup_python_environment():
         print("Creating virtual environment...")
         subprocess.run([sys.executable, "-m", "venv", "venv"], check=True)
 
-        # Determine activation script path
-        if os.name == "nt":  # Windows
-            activate_script = "venv\\Scripts\\activate.bat"
-            pip_path = "venv\\Scripts\\pip.exe"
-        else:  # Unix/Linux/MacOS
-            activate_script = "venv/bin/activate"
-            pip_path = "venv/bin/pip"
+        python_path, pip_path, activate_script, venv_bin_path = _get_venv_paths()
 
         print("Installing Python packages...")
         subprocess.run([pip_path, "install", "-r", "requirements.txt"], check=True)
+
+        # Ensure boto3 is available for config_generator.py
+        subprocess.run([pip_path, "install", "boto3"], check=True)
+
+        # Update environment to activate venv for subsequent steps
+        current_path = os.environ.get("PATH", "")
+        os.environ["PATH"] = venv_bin_path + os.pathsep + current_path
+        os.environ["VIRTUAL_ENV"] = os.path.abspath("venv")
 
         print(f"\nVirtual environment created successfully!")
         print(f"To activate it manually, run: source {activate_script}")
@@ -341,10 +360,16 @@ def final_setup():
     """Complete final setup steps"""
     print_step(6, "Final Setup")
 
+    if not os.path.exists("venv"):
+        if not setup_python_environment():
+            print("Virtual environment is required to continue.")
+            return False
+
     try:
         # Generate config for notebooks
         print("Generating configuration for notebooks...")
-        subprocess.run([sys.executable, "config_generator.py"], check=True)
+        venv_python, _, _, _ = _get_venv_paths()
+        subprocess.run([venv_python, "config_generator.py"], check=True)
 
         print("Setup complete!")
         print("\nNext steps:")

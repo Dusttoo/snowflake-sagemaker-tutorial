@@ -178,14 +178,16 @@ def get_terraform_outputs():
 
 def interactive_config_input():
     """Get configuration values interactively with validation"""
-    print("\n📝 Manual Configuration Input")
+    print("\nManual Configuration Input")
     print("Please provide the following values:")
 
     config = {}
 
     # S3 bucket with validation
     while True:
-        bucket = input("\nS3 bucket name: ").strip()
+        bucket = input(
+            "\nS3 bucket name (can be found in snowflake DESC output): "
+        ).strip()
         if bucket:
             temp_config = {"s3_bucket_name": bucket, "aws_region": "us-east-1"}
             if validate_s3_bucket_name(bucket):
@@ -317,6 +319,7 @@ def generate_config():
         f"   aws s3 cp data/austin_animal_outcomes.csv s3://{config['s3_bucket_name']}/raw/"
     )
     print("\n2. Start the tutorial:")
+    print(" source venv/bin/activate")
     print("   jupyter lab")
     print("   Open: notebooks/01_data_exploration.ipynb")
 
