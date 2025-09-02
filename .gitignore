@@ -53,10 +53,10 @@ local_config.json
 *.config.json
 
 # Data files (often large and potentially sensitive)
-data/*.csv
+predictions.csv
+processed_animal_data.csv
 data/*.json
 data/*.parquet
-*.csv
 *.json
 
 # Model artifacts (can be large)

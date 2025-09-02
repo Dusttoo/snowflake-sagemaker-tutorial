@@ -1,0 +1,81 @@
+
+
+animal_type,sex_outcome,age_in_days,primary_breed,color,outcome_month
+Dog,Spayed Female,365,Pit Bull,Brown,6
+Cat,Neutered Male,730,Domestic Shorthair,Black,3
+Dog,Intact Male,180,Labrador Retriever,Yellow,9
+Cat,Spayed Female,1095,Siamese,Seal Point,12
+Dog,Neutered Male,540,German Shepherd,Black,2
+Cat,Intact Female,250,Domestic Shorthair,Gray,5
+Dog,Spayed Female,820,Chihuahua,Tan,4
+Cat,Neutered Male,1460,Domestic Longhair,White,7
+Dog,Intact Male,120,Beagle,Tri-color,1
+Cat,Spayed Female,400,Siamese,Cream,8
+Dog,Neutered Male,1500,Labrador Retriever,Black,10
+Cat,Intact Male,600,Domestic Shorthair,Orange,11
+Dog,Spayed Female,200,Australian Cattle Dog,Blue,6
+Cat,Neutered Male,980,Domestic Shorthair,Black,9
+Dog,Intact Female,300,Border Collie,Black,4
+Cat,Spayed Female,2100,Persian,White,2
+Dog,Neutered Male,240,Pit Bull,Brindle,7
+Cat,Intact Male,450,Domestic Shorthair,Gray,1
+Dog,Spayed Female,3650,German Shepherd,Sable,5
+Cat,Neutered Male,1300,Domestic Shorthair,Black,12
+Dog,Intact Male,75,Chihuahua,Fawn,8
+Cat,Spayed Female,820,Siamese,Seal Point,3
+Dog,Neutered Male,920,Beagle,Brown,2
+Cat,Intact Female,95,Domestic Shorthair,Calico,6
+Dog,Spayed Female,400,Labrador Retriever,Chocolate,11
+Cat,Neutered Male,1100,Domestic Longhair,Gray,10
+Dog,Intact Male,60,Pit Bull,Black,12
+Cat,Spayed Female,1460,Domestic Shorthair,White,7
+Dog,Neutered Male,1095,Golden Retriever,Golden,9
+Cat,Intact Male,365,Domestic Shorthair,Black,4
+Dog,Spayed Female,730,Australian Shepherd,Merle,5
+Cat,Neutered Male,540,Domestic Shorthair,Tabby,1
+Dog,Intact Female,250,Boxer,Brindle,8
+Cat,Spayed Female,300,Domestic Shorthair,Gray,2
+Dog,Neutered Male,1460,Jack Russell Terrier,White,6
+Cat,Intact Male,820,Domestic Shorthair,Black,11
+Dog,Spayed Female,500,German Shepherd,Black,10
+Cat,Neutered Male,400,Domestic Shorthair,Brown,9
+Dog,Intact Male,220,Rottweiler,Black,3
+Cat,Spayed Female,640,Siamese,Seal Point,12
+Dog,Neutered Male,880,Labrador Retriever,Yellow,7
+Cat,Intact Female,720,Domestic Shorthair,Black,5
+Dog,Spayed Female,1040,Pit Bull,Blue,1
+Cat,Neutered Male,365,Domestic Shorthair,Gray,8
+Dog,Intact Male,310,Beagle,Tri-color,2
+Cat,Spayed Female,915,Domestic Longhair,White,4
+Dog,Neutered Male,1320,Chihuahua,Tan,6
+Cat,Intact Male,150,Domestic Shorthair,Black,10
+Dog,Spayed Female,280,Border Collie,Black,11
+Cat,Neutered Male,570,Domestic Shorthair,Orange,3
+Dog,Intact Female,190,American Pit Bull Terrier,Brindle,5
+Cat,Spayed Female,845,Domestic Shorthair,Calico,9
+Dog,Neutered Male,410,Golden Retriever,Golden,12
+Cat,Intact Male,225,Domestic Shorthair,Gray,2
+Dog,Spayed Female,970,German Shepherd,Sable,8
+Cat,Neutered Male,660,Domestic Shorthair,Black,6
+Dog,Intact Male,130,Labrador Retriever,Black,7
+Cat,Spayed Female,1110,Siamese,Seal Point,1
+Dog,Neutered Male,730,Beagle,Brown,4
+Cat,Intact Female,305,Domestic Shorthair,Tabby,11
+Dog,Spayed Female,1460,Chihuahua,Fawn,10
+Cat,Neutered Male,540,Domestic Longhair,Gray,5
+Dog,Intact Male,85,Boxer,Brindle,9
+Cat,Spayed Female,380,Domestic Shorthair,Black,12
+Dog,Neutered Male,1210,Australian Shepherd,Merle,2
+Cat,Intact Male,430,Domestic Shorthair,White,7
+Dog,Spayed Female,600,Jack Russell Terrier,White,3
+Cat,Neutered Male,900,Domestic Shorthair,Gray,8
+Dog,Intact Female,260,Rottweiler,Black,1
+Cat,Spayed Female,720,Domestic Shorthair,Calico,6
+Dog,Neutered Male,1020,Labrador Retriever,Yellow,5
+Cat,Intact Male,210,Domestic Shorthair,Black,9
+Dog,Spayed Female,330,Pit Bull,Black,12
+Cat,Neutered Male,650,Domestic Shorthair,Tabby,10
+Dog,Intact Male,140,Beagle,Tri-color,4
+Cat,Spayed Female,1095,Domestic Shorthair,Gray,2
+Dog,Neutered Male,820,Golden Retriever,Golden,7
+Cat,Intact Male,500,Domestic Shorthair,Black,11
